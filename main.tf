@@ -1,5 +1,5 @@
 provider "aws" {
-  region = var.aws_region
+  region = "us-east-1"
 }
 /*
 resource "aws_vpc" "main" {
@@ -43,13 +43,10 @@ resource "aws_security_group" "jenkins-sg-2022" {
 }
 */
 resource "aws_instance" "myFirstInstance" {
-  ami           = var.ami_id
+  ami           = "ami-0230bd60aa48260c6"
   #key_name = var.key_name
-  instance_type = var.instance_type
+  instance_type = "t2.micro"
   #vpc_security_group_ids = [aws_security_group.jenkins-sg-2022.id]
-  tags= {
-    Name = var.tag_name
-  }
 }
 /*
 # Create Elastic IP address
