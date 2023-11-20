@@ -1,4 +1,3 @@
-/*
 terraform {
   backend "s3" {
     bucket = "tf-file"
@@ -6,4 +5,4 @@ terraform {
     region = "us-east-1"
   }
 }
-*/
+
